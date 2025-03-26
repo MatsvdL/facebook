@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <form name="data" action="http://localhost:8023/processForm" method="POST">
+            <p>Name: <input type="text" name="name" placeholder="Name" required></p>
+            <p>Email: <input type="email" name="email" placeholder="Email"></p>
+            <p>Gender:<select name="gender" required>
+                <option value=""></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select></p>
+            <p>Age: <input type="number" name="age" placeholder="Age" required></p>
+            <p>Major: <input type="text" name="major" placeholder="Major" required></p>
+            <p id="hobbiesarray">Hobbies: <input type="text" name="hobbies" placeholder="Enter hobby" required></p>
+            <button type="button" id="addHobby">Add Hobby</button>
+            <p id="courses">Courses: <input type="text" name="courses" placeholder="Course 1" required></p>
+            <p>Teacher: <input type="text" name="teacher" placeholder="Name teacher" required></p>
+            <p>Description: <input type="text" name="description" placeholder="Description of the course"></p>
+
+            <p><input type="submit" value="Submit"/></p>
+        </form>
+        <form ref='uploadForm' id='uploadForm' action='http://localhost:8023/upload' method='post' encType="multipart/form-data">
+            <input type="file" name="photo" />
+            <input type='submit' value="Upload!" />
+        </form>
+        <script src="/javascripts/DOM.js"></script>
+    </body>
+</html>
